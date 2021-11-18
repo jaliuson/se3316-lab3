@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to "Doodle"</title>
+</head>
+<body>
+    <h1>Welcome to ghetto Doodle</h1>
+    <h2>Login as an admin</h2>
+    <p style="color: red">Admin Credentials -> username: admin | password:1234</p>
+    <form action='/adminLogin'>
+        Username: <input name='un'/>
+        <br/>
+        Password: <input name='pw'/>
+        <br/>
+        <input type="submit" value="Login">
+        <br/>
+    </form>
+    <h2>OR</h2>
+    <form action='/guestLogin'>
+        <input type="submit" value="Continue as Guest">
+    </form>
+</body>
+</html>
