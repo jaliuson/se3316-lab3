@@ -28,6 +28,8 @@ conn.query(`CREATE TABLE Doodles (person varchar(100),T1 varchar(100),T2 varchar
                     console.log('Table Created*****');
             })
 
+            /*
+
 //Load sample tuple
 conn.query( `INSERT INTO Doodles VALUES ("jason","on","on","on","on","on","on","on","on","on","on")`
             , (err,rows,fields) => {
@@ -46,5 +48,7 @@ conn.query( `SELECT * FROM Doodles `
                 for (r of rows)
                     console.log(r);
             });
+*/
+
 
 conn.end();
