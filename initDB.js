@@ -1,7 +1,7 @@
 const mysql = require('mysql');
 
 let conn = mysql.createConnection({ //GCP DB connection
-    host:'104.154.137.46',
+    host:'104.197.153.127',
     user: 'root',
     password:'8898',
     database:'usersDB'
@@ -28,7 +28,7 @@ conn.query(`CREATE TABLE Doodles (person varchar(100),T1 varchar(100),T2 varchar
                     console.log('Table Created*****');
             })
 
-            /*
+            
 
 //Load sample tuple
 conn.query( `INSERT INTO Doodles VALUES ("jason","on","on","on","on","on","on","on","on","on","on")`
@@ -48,7 +48,7 @@ conn.query( `SELECT * FROM Doodles `
                 for (r of rows)
                     console.log(r);
             });
-*/
+
 
 
 conn.end();
