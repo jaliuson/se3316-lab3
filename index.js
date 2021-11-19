@@ -18,6 +18,11 @@ app.get('/adminLogin', (req,res) => {
         isAdmin = true;
         res.redirect('/viewAvailability');        
     }
+    else{
+        res.send(`<h1 style="color:red">Login Unsuccessful</h1><h2>Please try Again</h2><form action="/goHome">
+        <input type="submit" value="Go Home">
+        </form>`);
+    }
 })
 
 //For guest login
@@ -27,7 +32,7 @@ app.get('/guestLogin', (req,res) => {
         res.redirect('/guestView');        
 })
 
-//Adming app page
+//Admin app page
 app.get('/adminView', (req, res) => {
     x = req.query.editee; //row to be edited
     res.sendFile(__dirname + '/static/adminApp.html');
