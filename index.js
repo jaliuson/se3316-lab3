@@ -4,8 +4,6 @@ const newConnection = require('./DBConnection');
 
 const app = express();
 
-guestName ="";
-
 //STATIC CONTENT--------------------------------------------------------------------------------------------
 app.use(express.static('static'));
 
@@ -34,6 +32,11 @@ app.get('/guestView', (req,res) => {
     res.sendFile(__dirname + '/static/guestApp.html');
 })
 
+//Handle guest submission\
+
+app.get('/submitAvailability', (req,res) => {
+    
+})
 
 //APP PORT--------------------------------------------------------------------------------------------------
 app.listen(1020);
