@@ -15,21 +15,21 @@ conn.query(`DROP TABLE Doodles`,
                     if (err)
                         console.log(err);
                     else
-                        console.log('Table Dropped');
+                        console.log('Table Dropped*****');
                 }
             )
 
 //CREATE TABLE COLUMNS---------------------------------------------------------
-conn.query(`CREATE TABLE Doodles (person varchar(100),T1 varchar(1),T2 varchar(1),T3 varchar(1),T4 varchar(1),T5 varchar(1),T6 varchar(1),T7 varchar(1),T8 varchar(1),T9 varchar(1),T10 varchar(1))` 
+conn.query(`CREATE TABLE Doodles (person varchar(100),T1 varchar(100),T2 varchar(100),T3 varchar(100),T4 varchar(100),T5 varchar(100),T6 varchar(100),T7 varchar(100),T8 varchar(100),T9 varchar(100),T10 varchar(100))` 
             , (err,rows,fields) => {
                 if (err)
                     console.log(err);
                 else
-                    console.log('Table Created');
+                    console.log('Table Created*****');
             })
-/*
-// {"desc":"Table","price":"200","imgPath":"/imgs/Table.jpg"}
-conn.query( `INSERT INTO Doodles VALUES ("Table",200,"/imgs/Table.jpg")`
+
+//Load sample tuple
+conn.query( `INSERT INTO Doodles VALUES ("jason","on","on","on","on","on","on","on","on","on","on")`
             , (err,rows,fields) => {
                 if (err)
                     console.log(err);
@@ -46,5 +46,5 @@ conn.query( `SELECT * FROM Doodles `
                 for (r of rows)
                     console.log(r);
             });
-*/
+
 conn.end();
